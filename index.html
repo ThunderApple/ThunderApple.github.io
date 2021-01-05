@@ -1,1 +1,255 @@
-<h1 style="color: #5e9ca0;">Vigor Food Production</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <title>Vigor Food Production</title>
+		
+		<style>
+		
+			body {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				height: 100%; 
+				max-height: 100%; 
+				font-family:Sans-serif;
+				line-height: 1.5em;
+			}
+
+			main {
+				position: fixed;
+				top: 50px; /* Set this to the height of the header */
+				bottom: 50px; /* Set this to the height of the footer */
+				left: 50px; 
+				right: 0;
+				overflow: auto; 
+				background: #fff;
+			}
+
+			#header {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 50px; 
+				overflow: hidden; /* Disables scrollbars on the header frame. To enable scrollbars, change "hidden" to "scroll" */
+				background: #BCCE98;
+			}
+
+			#footer {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 50px; 
+				overflow: hidden; /* Disables scrollbars on the footer frame. To enable scrollbars, change "hidden" to "scroll" */
+				background: #BCCE98;
+			}
+
+			#dhbody {
+				width: 35%;
+				overflow: auto;
+			}
+
+			#canvas {
+				position: absolute;
+				top: 0px; 
+				right: 0px; 
+				width: 62.5%;
+				height: 95%; 
+				overflow: hidden; 
+			}
+
+			#info {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				padding: 5px;
+			}
+
+			#info2 {
+				position: absolute;
+				left: 20%;
+				width: 50%;
+			}
+
+			#gui {
+				position:absolute;
+				bottom: 0px;
+				right: -10px;
+			}
+
+			.innertube {
+				margin: 15px; /* Provides padding for the content */
+			}
+
+			p {
+				color: #555;
+			}
+
+			/*IE6 fix*/
+			* html body{
+				padding: 50px 0 50px 230px; /* Set the first value to the height of the header, the third value to the height of the footer, and last value to the width of the nav */
+			}
+
+			* html main{ 
+				height: 100%; 
+				width: 100%; 
+			}
+
+			table.GeneratedTable {
+				width:100%;
+				background-color:#FFFFFF;
+				border-collapse:collapse;border-width:1px;
+				border-color:#336600;
+				border-style:solid;
+				color:#009900;
+			}
+
+			table.GeneratedTable td, table.GeneratedTable th {
+				border-width:1px;
+				border-color:#336600;
+				border-style:solid;
+				padding:3px;
+			}
+
+			table.GeneratedTable thead {
+				background-color:#CCFF99;
+			}
+
+			button {
+				margin-top: 10px;
+				margin-right: 10px;
+			}
+
+			label {
+				display: block;
+				margin: 30px 0 0 0;
+			}
+			select {
+				float: left;
+				width: 80px;
+			}
+
+			/* Style the buttons that are used to open and close the accordion panel */
+			button.accordion {
+				background-color: #eee;
+				color: #444;
+				cursor: pointer;
+				padding: 5px;
+				width: 95%;
+				text-align: left;
+				border: none;
+				outline: none;
+				transition: 0.4s;
+			}
+
+			/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+			button.accordion.active, button.accordion:hover {
+				background-color: #ddd;
+			}
+
+			/* Style the accordion panel. Note: hidden by default */
+			div.panel {
+				padding: 0 5px;
+				background-color: white;
+				display: none;
+			}
+
+		
+		</style>
+		
+      
+    </head>
+    <body>
+
+        <header id="header">
+            <div class="innertube">
+                <p>Vigor Food Production </p>
+            </div>
+        </header>
+
+        <main>
+            <div class="innertube">
+                <div id="dhbody">
+                    <h1>Input your production levels:</h1>
+
+                    <!-- HTML Code -->
+                    <table class="GeneratedTable">
+
+                        <thead>
+                            <tr>
+                                <th>Link</th>
+                                <th>&alpha;<sub>i-1</sub></th>
+                                <th>a<sub>i-1</sub></th>
+                                <th>d<sub>i</sub></th>
+                                <th>&theta;<sub>i</sub></th>
+                                <th>type</th>
+                                <th>min</th>
+                                <th>max</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dh">
+                        </tbody>
+                    </table> 
+                    <div>
+                        <button id="calcButton">Calculate</button>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </main>	
+
+
+        <footer id="footer">
+            <div class="innertube">
+                <p>&copy; 2021-2021; contact: <a href="https://account.xbox.com/en-us/profile?gamertag=ThunderApple">ThunderApple@xbox</a> </p>
+            </div>
+        </footer>
+
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/numeric-1.2.6.min.js"></script>
+		<script type="text/javascript" src="js/dat.gui.min.js"></script>
+		<script type="text/javascript" src="js/Detector.js"></script>
+		<script type="text/javascript" src="js/three.min.js"></script>
+		<script type="text/javascript" src="js/OrbitControls.js"></script>
+		<script type="text/javascript" src="js/TransformControls.js"></script>
+		<script type="text/javascript" src="js/DHTable.js"></script>
+		<script type="text/javascript" src="js/Kine.js"></script>
+
+        <script>
+	
+
+            $(document).ready(function () {
+
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].onclick = function () {
+                        /* Toggle between adding and removing the "active" class,
+                         to highlight the button that controls the panel */
+                        this.classList.toggle("active");
+
+                        /* Toggle between hiding and showing the active panel */
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                            panel.style.display = "none";
+                        } else {
+                            panel.style.display = "block";
+                        }
+                    }
+                }
+
+                if (!Detector.webgl) {
+                    Detector.addGetWebGLMessage();
+                    document.getElementById('canvas').innerHTML = "";
+                } else {
+                    new Kine(document.getElementById('canvas'), new DHTable());
+                }
+
+            });
+
+        </script>
+    </body>
+</html>
