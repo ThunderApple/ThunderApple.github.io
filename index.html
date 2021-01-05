@@ -14,11 +14,12 @@
             text-align: center;
         }
         
-        h1{
+        h1, h4 {
             font-family:Arial, sans-serif;
             color:#00f900;
             background-color:#000000;
         }
+        
 
         a:link {
             color:#a91701;
@@ -99,12 +100,34 @@
         table.boostTable thead {
         background-color: #a91701;
         }
+
+        table.result {
+        width: auto;
+        background-color: #000000;
+        border-collapse: collapse;
+        border-width: 1px;
+        border-color: #831100;
+        border-style: solid;
+        color: #77bb41;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        table.result td, table.result th {
+        border-width: 1px;
+        border-color: #831100;
+        border-style: solid;
+        padding: 2px;
+        text-align: center;
+        }
+        table.result thead {
+        background-color: #a91701;
+        }
         
         footer {
         position:absolute;
         bottom:0;
         width:100%;
-        height:40px;   /* Height of the footer */
+        height:170px;   /* Height of the footer */
         background:rgb(0, 0, 0);
         background-position:bottom left;
         }
@@ -114,6 +137,7 @@
 <body>
     <section>
         <h1>Vigor Food Production</h1>
+        <h4>Can you reach 10k a week?</h4>
         <p>
         <table class="gui">
             <thead>
@@ -350,16 +374,49 @@
     <section>
         <p><table class="result">
             <tr>
+                <thead><td colspan="2">
+                    Weekly Statistics
+                </td></thead>
+            </tr>
+            <tbody>
+            <tr>
                 <td>
-
+                    Total:
+                </td>
+                <td>
+                    <span id="tFood"></span>
                 </td>
             </tr>
-
+            <tr>
+                <td>
+                    Goal:
+                </td>
+                <td>
+                    <span id="gFood"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Loot Needed:
+                </td>
+                <td>
+                    <span id="nFood"></span>
+                </td>
+            </tr></tbody>
         </table></p>
     </section>
 </body>
 
 <footer>
+    <p>For the love of Vigor,</p>
+    <form action="https://www.paypal.com/donate?hosted_button_id=8JWBRSWHA2QPY" method="post" target="_top">
+        <input type="hidden" name="hosted_button_id" value="8JWBRSWHA2QPY" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/NO/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+        <img alt="" border="0" src="https://www.paypal.com/en_NO/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+    <p>
+    and this page will be updated..
+    </p>
     <p>&copy; 2021 - <span id="copyYear"></span>; 
         <a href="https://account.xbox.com/en-us/profile?gamertag=ThunderApple" target="_blank">ThunderApple@xbox</a>
         </p>
@@ -374,6 +431,10 @@
     var wRat = 0;
     var wBox = 0;
 
+    var tFood = 0;
+    var gFood = 10000;
+    var nFood = gFood-tFood;
+
     var cYear = (new Date()).getFullYear();
 
     document.getElementById("copyYear").innerHTML = cYear;
@@ -383,11 +444,16 @@
 
     document.getElementById("wRt").innerHTML = wRat;
     document.getElementById("wBp").innerHTML = wBox;
+
+    document.getElementById("tFood").innerHTML = tFood.toFixed(2);
+    document.getElementById("gFood").innerHTML = gFood.toFixed(2);
+    document.getElementById("nFood").innerHTML = nFood.toFixed(2);
 </script>
 
 <!--Print Production to screen-->
 <script>
     function print() {
+        // Table 1
         var rat1 = (document.getElementById("rt1").value)/1; 
         var rat2 = (document.getElementById("rt2").value)/1; 
         var rat3 = (document.getElementById("rt3").value)/1; 
@@ -415,6 +481,20 @@
 
         document.getElementById("wRt").innerHTML = wRat.toFixed(2);
         document.getElementById("wBp").innerHTML = wBox.toFixed(2);
+
+
+        // Table 2
+        tFood = wRat+wBox;
+        nFood = gFood-tFood;
+
+        document.getElementById("tFood").innerHTML = tFood.toFixed(2);
+        if (nFood<=0) {
+            nFood = "Goal!"
+            document.getElementById("nFood").innerHTML = nFood;
+        }
+        else {
+            document.getElementById("nFood").innerHTML = nFood.toFixed(2);
+        }
     }
 </script>
 
