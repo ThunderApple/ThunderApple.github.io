@@ -131,6 +131,15 @@
         background:rgb(0, 0, 0);
         background-position:bottom left;
         }
+        table.gui, table.endTable {
+        width: auto;
+        background-color: #000000;
+        border-collapse: collapse;
+        border-width: 0px;
+        color: #77bb41;
+        margin-left: auto;
+        margin-right: auto;
+        }
     </style>
 </head>
 
@@ -409,11 +418,21 @@
 
 <footer>
     <p>For the love of Vigor,</p>
-    <form action="https://www.paypal.com/donate?hosted_button_id=8JWBRSWHA2QPY" method="post" target="_top">
-        <input type="hidden" name="hosted_button_id" value="8JWBRSWHA2QPY" />
-        <input type="image" src="https://www.paypalobjects.com/en_US/NO/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-        <img alt="" border="0" src="https://www.paypal.com/en_NO/i/scr/pixel.gif" width="1" height="1" />
-    </form>
+    <table class="endTable">
+        <tr>
+            <td>
+                <form action="https://www.paypal.com/donate?hosted_button_id=8JWBRSWHA2QPY" method="post" target="_top">
+                    <input type="hidden" name="hosted_button_id" value="8JWBRSWHA2QPY" />
+                    <input type="image" src="https://www.paypalobjects.com/en_US/NO/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                    <img alt="" border="0" src="https://www.paypal.com/en_NO/i/scr/pixel.gif" width="1" height="1" />
+                </form>
+            </td>
+            <td> <p>or</p> </td>
+            <td>
+                <div class="fb-like" data-href="https://thunderapple.github.io" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false"></div>
+            </td>
+        </tr>
+    </table>
     <p>
     and this page will be updated..
     </p>
@@ -482,7 +501,6 @@
         document.getElementById("wRt").innerHTML = wRat.toFixed(2);
         document.getElementById("wBp").innerHTML = wBox.toFixed(2);
 
-
         // Table 2
         tFood = wRat+wBox;
         nFood = gFood-tFood;
@@ -498,5 +516,9 @@
     }
 </script>
 
+<!--Facebook Like Button-->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="VoDuk0DZ">
+</script>
 
 </html>
