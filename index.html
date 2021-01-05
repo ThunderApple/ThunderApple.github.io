@@ -3,7 +3,7 @@
 <head>
     <title>VigorGame Food Production Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Vigor, VigorGame">
+    <meta name="keywords" content="Vigor, VigorGame, food-production, ThunderApple">
     <meta name="description" content="^Read title..">
     <style>
         body {
@@ -11,6 +11,7 @@
             background-repeat:no-repeat;
             background-position:top left;
             background-attachment:fixed;
+            text-align: center;
         }
         
         h1{
@@ -18,6 +19,17 @@
             color:#00f900;
             background-color:#000000;
         }
+
+        a:link {
+            color:#a91701;
+        }
+        a:visited {
+            color:#96d35f;
+        }
+        a:hover {
+            color:#e5ff00
+        }
+
         p {
             font-family:Georgia, serif;
             font-size:14px;
@@ -26,11 +38,17 @@
             color:#96d35f;
             background-color:#000000;
         }
-    
+        
         select {
             font-family:Arial, sans-serif;
             color:#00f900;
             background-color:#3f3f3f;
+        }
+
+        button {
+            font-family:Areal, sans-serif;
+            color:#00f900;
+            background-color: #3f3f3f;
         }
 
         aside {
@@ -48,6 +66,8 @@
         border-color: #831100;
         border-style: solid;
         color: #77bb41;
+        margin-left: auto;
+        margin-right: auto;
         }
         table.gui td, table.gui th {
         border-width: 1px;
@@ -95,10 +115,6 @@
     <section>
         <h1>Vigor Food Production</h1>
         <p>
-        <aside>
-            &#60;insert some sort of graph here&#62;
-        </aside>
-
         <table class="gui">
             <thead>
                 <tr>
