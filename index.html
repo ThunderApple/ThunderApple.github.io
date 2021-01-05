@@ -248,7 +248,7 @@
             </tbody>
         </table></p>
         
-        <input type="submit" value="Calculate">
+        <button onclick="print()">Calculate</button>
         </form>
     </section>
 
@@ -261,18 +261,49 @@
     <p>&copy; 2021-2021; contact: <a href="https://account.xbox.com/en-us/profile?gamertag=ThunderApple" target="_blank">ThunderApple@xbox</a> </p>
 </footer>
 
-
+<!--Assign values from drop down lists-->
 <script>
-    var hRat = "day1";
-    var hBox = "day2";
-    var wRat = "week1";
-    var wBox = "week2";
+    var rat1 = document.getElementById("rt1"); 
+    var rat2 = document.getElementById("rt2"); 
+    var rat3 = document.getElementById("rt3"); 
+    var rat4 = document.getElementById("rt4"); 
+
+    var box1 = document.getElementById("bp1"); 
+    var box2 = document.getElementById("bp2"); 
+    var box3 = document.getElementById("bp3"); 
+    var box4 = document.getElementById("bp4"); 
+</script>
+
+
+<!--Calculations-->
+<script>
+    var hRat = 0;
+    var hBox = 0;
+    var wRat = 0;
+    var wBox = 0;
 
     document.getElementById("hRt").innerHTML = hRat;
     document.getElementById("hBp").innerHTML = hBox;
 
     document.getElementById("wRt").innerHTML = wRat;
     document.getElementById("wBp").innerHTML = wBox;
+</script>
+
+<!--Print Production to screen-->
+<script>
+    function print() {
+        hRat = rat1 + rat2 + rat3 + rat4;
+        hBox = box1 + box2 + box3 + box4;
+
+        wRat = hRat*24*7;
+        wBox = hBox*24*7;
+        
+        document.getElementById("hRt").innerHTML = hRat;
+        document.getElementById("hBp").innerHTML = hBox;
+
+        document.getElementById("wRt").innerHTML = wRat;
+        document.getElementById("wBp").innerHTML = wBox;
+    }
 </script>
 
 
