@@ -6,13 +6,40 @@
     <meta name="keywords" content="Vigor, VigorGame">
     <meta name="description" content="^Read title..">
     <style>
-        body {background-color:#000000;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}
-        footer {background-color:#000000;background-repeat:no-repeat;background-position:bottom left;background-attachment:fixed;}
-        h1{font-family:Arial, sans-serif;color:#00f900;background-color:#000000;}
-        p {font-family:Georgia, serif;font-size:14px;font-style:normal;font-weight:normal;color:#96d35f;background-color:#000000;}
+        body {
+            background-color:#000000;
+            background-repeat:no-repeat;
+            background-position:top left;
+            background-attachment:fixed;
+        }
+        
+        h1{
+            font-family:Arial, sans-serif;
+            color:#00f900;
+            background-color:#000000;
+        }
+        p {
+            font-family:Georgia, serif;
+            font-size:14px;
+            font-style:normal;
+            font-weight:normal;
+            color:#96d35f;
+            background-color:#000000;
+        }
     
-        select {font-family:Arial, sans-serif;color:#00f900;background-color:#3f3f3f;}
+        select {
+            font-family:Arial, sans-serif;
+            color:#00f900;
+            background-color:#3f3f3f;
+        }
 
+        aside {
+            width: auto;
+            padding-left: 15px;
+            float:right;
+            color:#000000
+        }
+        
         table.gui {
         width: 25%;
         background-color: #000000;
@@ -22,16 +49,43 @@
         border-style: solid;
         color: #77bb41;
         }
-        
         table.gui td, table.gui th {
         border-width: 1px;
         border-color: #831100;
         border-style: solid;
         padding: 2px;
+        text-align: center;
         }
-        
         table.gui thead {
         background-color: #a91701;
+        }
+
+        table.boostTable {
+        width: 25%;
+        background-color: #000000;
+        border-collapse: collapse;
+        border-width: 1px;
+        border-color: #831100;
+        border-style: none;
+        color: #77bb41;
+        }
+        table.boostTable td, table.boostTable th {
+        border-width: 1px;
+        border-color: #831100;
+        border-style: none;
+        padding: 2px;
+        }
+        table.boostTable thead {
+        background-color: #a91701;
+        }
+        
+        footer {
+        position:absolute;
+        bottom:0;
+        width:100%;
+        height:40px;   /* Height of the footer */
+        background:rgb(0, 0, 0);
+        background-position:bottom left;
         }
     </style>
 </head>
@@ -39,8 +93,11 @@
 <body>
     <section>
         <h1>Vigor Food Production</h1>
-        
         <p>
+        <aside>
+            &#60;insert some sort of graph here&#62;
+        </aside>
+
         <table class="gui">
             <thead>
                 <tr>
@@ -53,6 +110,7 @@
                 <tr>
                 <td>1</td>
                 <td><select name="rt1" id="rt1">
+                    <option value=0>0</option>
                     <option value=2>1</option>
                     <option value=2.3>2</option>
                     <option value=2.7>3</option>
@@ -69,6 +127,7 @@
                     </select>
                 </td> 
                 <td><select name="bp1" id="bp1">
+                    <option value=0>0</option>
                     <option value=1>1</option>
                     <option value=1.25>2</option>
                     <option value=1.5>3</option>
@@ -89,6 +148,7 @@
                 <tr>
                 <td>2</td>
                 <td><select name="rt2" id="rt2">
+                    <option value=0>0</option>
                     <option value=2>1</option>
                     <option value=2.3>2</option>
                     <option value=2.7>3</option>
@@ -105,6 +165,7 @@
                 </select>
                 </td> 
                 <td><select name="bp2" id="bp2">
+                    <option value=0>0</option>
                     <option value=1>1</option>
                     <option value=1.25>2</option>
                     <option value=1.5>3</option>
@@ -125,6 +186,7 @@
                 <tr>
                 <td>3</td>
                 <td><select name="rt3" id="rt3">
+                    <option value=0>0</option>
                     <option value=2>1</option>
                     <option value=2.3>2</option>
                     <option value=2.7>3</option>
@@ -141,6 +203,7 @@
                 </select>
                 </td> 
                 <td><select name="bp3" id="bp3">
+                    <option value=0>0</option>
                     <option value=1>1</option>
                     <option value=1.25>2</option>
                     <option value=1.5>3</option>
@@ -161,6 +224,7 @@
                 <tr>
                 <td>4</td>
                 <td><select name="rt4" id="rt4">
+                    <option value=0>0</option>
                     <option value=2>1</option>
                     <option value=2.3>2</option>
                     <option value=2.7>3</option>
@@ -177,6 +241,7 @@
                 </select>
                 </td> 
                 <td><select name="bp4" id="bp4">
+                    <option value=0>0</option>
                     <option value=1>1</option>
                     <option value=1.25>2</option>
                     <option value=1.5>3</option>
@@ -196,74 +261,101 @@
                 
                 <tr>
                 <td>Boost LvL</td>
-                <td><select name="sh" id="sh">
-                    <option value=5>1</option>
-                    <option value=7>2</option>
-                    <option value=10>3</option>
-                    <option value=12>4</option>
-                    <option value=15>5</option>
-                    <option value=18>6</option>
-                    <option value=20>7</option>
-                    <option value=23>8</option>
-                    <option value=25>9</option>
-                    <option value=28>10</option>
-                    <option value=32>11</option>
-                    <option value=36>12</option>
-                    <option value=40>13</option>
-                    </select>
-                </td> 
-                <td><select name="oh" id="oh">
-                    <option value=5>1</option>
-                    <option value=7>2</option>
-                    <option value=10>3</option>
-                    <option value=12>4</option>
-                    <option value=15>5</option>
-                    <option value=18>6</option>
-                    <option value=20>7</option>
-                    <option value=23>8</option>
-                    <option value=25>9</option>
-                    <option value=28>10</option>
-                    <option value=32>11</option>
-                    <option value=36>12</option>
-                    <option value=40>13</option>
-                </select>
+                <td>
+                    <table class="boostTable">
+                        <thead><tr><td>
+                            Smokehouse
+                        </td></tr></thead>
+                        <tbody><tr><td>
+                            <select name="sh" id="sh">
+                                <option value=0>0</option>
+                                <option value=5>1</option>
+                                <option value=7>2</option>
+                                <option value=10>3</option>
+                                <option value=12>4</option>
+                                <option value=15>5</option>
+                                <option value=18>6</option>
+                                <option value=20>7</option>
+                                <option value=23>8</option>
+                                <option value=25>9</option>
+                                <option value=28>10</option>
+                                <option value=32>11</option>
+                                <option value=36>12</option>
+                                <option value=40>13</option>
+                            </select>
+                        </td></tr></tbody>
+                    </table>
+                </td>
+                <td>
+                    <table class="boostTable">
+                        <thead><tr><td>
+                            Outhouse
+                        </td></tr></thead>
+                        <tbody><tr><td>
+                            <select name="oh" id="oh">
+                                <option value=0>0</option>
+                                <option value=5>1</option>
+                                <option value=7>2</option>
+                                <option value=10>3</option>
+                                <option value=12>4</option>
+                                <option value=15>5</option>
+                                <option value=18>6</option>
+                                <option value=20>7</option>
+                                <option value=23>8</option>
+                                <option value=25>9</option>
+                                <option value=28>10</option>
+                                <option value=32>11</option>
+                                <option value=36>12</option>
+                                <option value=40>13</option>
+                            </select>
+                        </td></tr></tbody>
+                    </table>
+                    
                 </td>
                 </tr>
 
                 <tr>
                 <td>Production (h)</td>
-                <td> <p id="hRt"></p> </td> 
-                <td> <p id="hBp"></p> </td>
+                <td> <span id="hRt"></span> </td> 
+                <td> <span id="hBp"></span> </td>
                 </tr>
                 <tr>
                 <td>Production (week)</td>
-                <td> <p id="wRt"></p> </td> 
-                <td> <p id="wBp"></p> </td>
+                <td> <span id="wRt"></span> </td> 
+                <td> <span id="wBp"></span> </td>
                 </tr>
             </tbody>
         </table></p>
         
         <button onclick="print()">Calculate</button>
     </section>
-
-    <aside>
-
-    </aside>
+    
+    <section>
+        <p>
+            yo
+        </p>
+    </section>
 </body>
 
 <footer>
-    <p>&copy; 2021-2021; contact: <a href="https://account.xbox.com/en-us/profile?gamertag=ThunderApple" target="_blank">ThunderApple@xbox</a> </p>
+    <p>&copy; 2021 - <span id="copyYear"></span>; 
+        <a href="https://account.xbox.com/en-us/profile?gamertag=ThunderApple" target="_blank">ThunderApple@xbox</a>
+        </p>
 </footer>
 
 
 
-<!--Calculations-->
+<!--Initiation-->
 <script>
     var hRat = 0;
     var hBox = 0;
     var wRat = 0;
     var wBox = 0;
 
+    var cYear = (new Date()).getFullYear();
+
+    document.getElementById("copyYear").innerHTML = cYear;
+    
     document.getElementById("hRt").innerHTML = hRat;
     document.getElementById("hBp").innerHTML = hBox;
 
@@ -296,11 +388,11 @@
         wRat = hRat*24*7;
         wBox = hBox*24*7;
 
-        document.getElementById("hRt").innerHTML = hRat;
-        document.getElementById("hBp").innerHTML = hBox;
+        document.getElementById("hRt").innerHTML = hRat.toFixed(2);
+        document.getElementById("hBp").innerHTML = hBox.toFixed(2);
 
-        document.getElementById("wRt").innerHTML = wRat;
-        document.getElementById("wBp").innerHTML = wBox;
+        document.getElementById("wRt").innerHTML = wRat.toFixed(2);
+        document.getElementById("wBp").innerHTML = wBox.toFixed(2);
     }
 </script>
 
