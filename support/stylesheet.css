@@ -1,0 +1,153 @@
+table.fpWrap {
+    position: relative;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+table.fpWrap td, table.fpWrap th {
+    text-align: center;
+}
+
+#vigorLogo {
+    transform: rotate(-20deg);
+    border: 0;
+}
+#vigorLogo:hover {
+    filter: invert(100%);
+}
+
+body {
+    background-color:#000000;
+    background-repeat:no-repeat;
+    background-position:top left;
+    background-attachment:fixed;
+    text-align: center;
+    margin-bottom: 170px;
+
+    font-family:Georgia, serif;
+    font-size:14px;
+    font-style:normal;
+    font-weight:normal;
+    color:#96d35f;
+}
+
+h1, h4 {
+    font-family:Arial, sans-serif;
+    color:#00f900;
+}
+
+a:link {
+    color:#a91701;
+}
+a:visited {
+    color:#96d35f;
+}
+a:hover {
+    color:#e5ff00
+}
+
+select {
+    font-family:Arial, sans-serif;
+    color:#00f900;
+    background-color:#3f3f3f;
+}
+button {
+    font-family:Areal, sans-serif;
+    color:#00f900;
+    background-color: #3f3f3f;
+}
+aside {
+    width: auto;
+    padding-left: 15px;
+    float:right;
+    color:#000000
+}
+
+table.gui {
+    width: auto;
+    background-color: #000000;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-color: #831100;
+    border-style: solid;
+    color: #77bb41;
+    margin-left: auto;
+    margin-right: auto;
+}
+table.gui td, table.gui th {
+    border-width: 1px;
+    border-color: #831100;
+    border-style: solid;
+    padding: 2px;
+    text-align: center;
+}
+    table.gui thead {
+    background-color: #a91701;
+}
+
+table.boostTable {
+    width: 100%;
+    background-color: #000000;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-color: #831100;
+    border-style: none;
+    color: #77bb41;
+}
+table.boostTable td, table.boostTable th {
+    border-width: 1px;
+    border-color: #831100;
+    border-style: none;
+    padding: 0px;
+    text-align: center;
+}
+table.boostTable thead {
+    background-color: #a91701;
+}
+
+table.result {
+    width: auto;
+    background-color: #000000;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-color: #831100;
+    border-style: solid;
+    color: #77bb41;
+    margin-left: auto;
+    margin-right: auto;
+}
+    table.result td, table.result th {
+    border-width: 1px;
+    border-color: #831100;
+    border-style: solid;
+    padding: 2px;
+    text-align: center;
+}
+table.result thead {
+    background-color: #a91701;
+}
+table.gui, table.endTable {
+    width: auto;
+    background-color: #000000;
+    border-collapse: collapse;
+    border-width: 0px;
+    color: #77bb41;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#wrapper {
+    height: 125%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content {
+    height: 100vh;
+}
+#footer {
+    bottom: 0;
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+}

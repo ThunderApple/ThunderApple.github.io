@@ -5,146 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Vigor, VigorGame, food-production, ThunderApple">
     <meta name="description" content="^Read title..">
-    <style>
-        body {
-            background-color:#000000;
-            background-repeat:no-repeat;
-            background-position:top left;
-            background-attachment:fixed;
-            text-align: center;
-            margin-bottom: 170px;
 
-            font-family:Georgia, serif;
-            font-size:14px;
-            font-style:normal;
-            font-weight:normal;
-            color:#96d35f;
-        }
-        
-        h1, h4 {
-            font-family:Arial, sans-serif;
-            color:#00f900;
-            background-color:#000000;
-        }
-
-        a:link {
-            color:#a91701;
-        }
-        a:visited {
-            color:#96d35f;
-        }
-        a:hover {
-            color:#e5ff00
-        }
-        
-        select {
-            font-family:Arial, sans-serif;
-            color:#00f900;
-            background-color:#3f3f3f;
-        }
-        button {
-            font-family:Areal, sans-serif;
-            color:#00f900;
-            background-color: #3f3f3f;
-        }
-        aside {
-            width: auto;
-            padding-left: 15px;
-            float:right;
-            color:#000000
-        }
-        
-        table.gui {
-        width: auto;
-        background-color: #000000;
-        border-collapse: collapse;
-        border-width: 1px;
-        border-color: #831100;
-        border-style: solid;
-        color: #77bb41;
-        margin-left: auto;
-        margin-right: auto;
-        }
-        table.gui td, table.gui th {
-        border-width: 1px;
-        border-color: #831100;
-        border-style: solid;
-        padding: 2px;
-        text-align: center;
-        }
-        table.gui thead {
-        background-color: #a91701;
-        }
-
-        table.boostTable {
-        width: 100%;
-        background-color: #000000;
-        border-collapse: collapse;
-        border-width: 1px;
-        border-color: #831100;
-        border-style: none;
-        color: #77bb41;
-        }
-        table.boostTable td, table.boostTable th {
-        border-width: 1px;
-        border-color: #831100;
-        border-style: none;
-        padding: 0px;
-        text-align: center;
-        }
-        table.boostTable thead {
-        background-color: #a91701;
-        }
-
-        table.result {
-        width: auto;
-        background-color: #000000;
-        border-collapse: collapse;
-        border-width: 1px;
-        border-color: #831100;
-        border-style: solid;
-        color: #77bb41;
-        margin-left: auto;
-        margin-right: auto;
-        }
-        table.result td, table.result th {
-        border-width: 1px;
-        border-color: #831100;
-        border-style: solid;
-        padding: 2px;
-        text-align: center;
-        }
-        table.result thead {
-        background-color: #a91701;
-        }
-        table.gui, table.endTable {
-        width: auto;
-        background-color: #000000;
-        border-collapse: collapse;
-        border-width: 0px;
-        color: #77bb41;
-        margin-left: auto;
-        margin-right: auto;
-        }
-
-        
-        #wrapper {
-            height: 125%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #content {
-            height: 100vh;
-        }
-        #footer {
-            bottom: 0;
-            position: fixed;
-            overflow: auto;
-            width: 100%;
-        }
-
-        
-    </style>
+    <link rel="stylesheet" href="/support/stylesheet.css">
 </head>
 
 <body>
@@ -154,8 +16,23 @@
 <!-- ---------------------------------------------------- -->
         <div id="header">
             <p>
-                <h1>Vigor Food Production</h1>
-                <h4>Can you reach 10k a week?</h4>
+                <table class="fpWrap">
+                    <tr>
+                        <td valign="middle" align="center">
+                            <a href="https://vigorgame.com"><img id="vigorLogo" src="/media/vigor_logo.png" width="100" alt="VigorGame Logo" /></a>
+                        </td>
+                        <td>
+                            <div class="fpTitle"><h1>Food Calculator</h1></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h4>Can you reach 10k a week?</h4>
+                        </td>
+                    </tr>
+                    
+                    
+                </table>
             </p>
         </div>
 
@@ -469,77 +346,10 @@
 <!-- SCRIPTS                                              -->
 <!-- ---------------------------------------------------- -->
 <!--Initiation-->
-<script>
-    var hRat = 0;
-    var hBox = 0;
-    var wRat = 0;
-    var wBox = 0;
-
-    var tFood = 0;
-    var gFood = 10000;
-    var nFood = gFood-tFood;
-
-    var cYear = (new Date()).getFullYear();
-
-    document.getElementById("copyYear").innerHTML = cYear;
-    
-    document.getElementById("hRt").innerHTML = hRat;
-    document.getElementById("hBp").innerHTML = hBox;
-
-    document.getElementById("wRt").innerHTML = wRat;
-    document.getElementById("wBp").innerHTML = wBox;
-
-    document.getElementById("tFood").innerHTML = tFood.toFixed(2);
-    document.getElementById("gFood").innerHTML = gFood.toFixed(2);
-    document.getElementById("nFood").innerHTML = nFood.toFixed(2);
-</script>
+<script src="js/initiation.js"></script>
 
 <!--Print Production to screen-->
-<script>
-    function print() {
-        // Table 1
-        var rat1 = (document.getElementById("rt1").value)/1; 
-        var rat2 = (document.getElementById("rt2").value)/1; 
-        var rat3 = (document.getElementById("rt3").value)/1; 
-        var rat4 = (document.getElementById("rt4").value)/1; 
-
-        var box1 = (document.getElementById("bp1").value)/1; 
-        var box2 = (document.getElementById("bp2").value)/1; 
-        var box3 = (document.getElementById("bp3").value)/1; 
-        var box4 = (document.getElementById("bp4").value)/1; 
-
-        var shouse = (document.getElementById("sh").value)/1; 
-        var ohouse = (document.getElementById("oh").value)/1; 
-
-        hRat = rat1 + rat2 + rat3 + rat4;
-        hRat = hRat + ((hRat*shouse)/100);
-
-        hBox = box1 + box2 + box3 + box4;
-        hBox = hBox + ((hBox*ohouse)/100);
-
-        wRat = hRat*24*7;
-        wBox = hBox*24*7;
-
-        document.getElementById("hRt").innerHTML = hRat.toFixed(2);
-        document.getElementById("hBp").innerHTML = hBox.toFixed(2);
-
-        document.getElementById("wRt").innerHTML = wRat.toFixed(2);
-        document.getElementById("wBp").innerHTML = wBox.toFixed(2);
-
-        // Table 2
-        tFood = wRat+wBox;
-        nFood = gFood-tFood;
-
-        document.getElementById("tFood").innerHTML = tFood.toFixed(2);
-        if (nFood<=0) {
-            nFood = "Goal!"
-            document.getElementById("nFood").innerHTML = nFood;
-        }
-        else {
-            document.getElementById("nFood").innerHTML = nFood.toFixed(2);
-        }
-    }
-</script>
+<script src="js/calculate.js"></script>
 
 <!--Facebook Like Button-->
 <div id="fb-root"></div>
