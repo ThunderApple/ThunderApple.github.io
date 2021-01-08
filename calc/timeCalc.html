@@ -31,16 +31,14 @@
                             <a href="https://vigorgame.com" target="_blank"><img id="vigorLogo" src="/media/vigor_logo.png" width="100" alt="VigorGame Logo" /></a>
                         </td>
                         <td>
-                            <div class="fpTitle"><h1>Food Calculator</h1></div>
+                            <div class="fpTitle"><h1>Time Calculator</h1></div>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <h4>Can you reach 10k a week?</h4>
+                            <h4>When will you reach 10k?</h4>
                         </td>
                     </tr>
-                    
-                    
                 </table>
             </p>
         </div>
@@ -267,37 +265,22 @@
                     </tr>
     
                     <tr>
-                    <td>Production (h)</td>
-                    <td> <span id="hRt"></span> </td> 
-                    <td> <span id="hBp"></span> </td>
-                    </tr>
-                    <tr>
-                    <td>Production (week)</td>
-                    <td> <span id="wRt"></span> </td> 
-                    <td> <span id="wBp"></span> </td>
+                        <td colspan="2">Food in inventory</td>
+                        <td> <input type="number" id="iFood" name="iFood" 
+                            value="0" maxlength="1" size="1"> </td> 
                     </tr>
                 </tbody>
             </table></p>
             
-            <button onclick="calcFood()">Calculate<br>Food</button>
-            &emsp;
             <button onclick="calcTime()">Calculate<br>Time</button>
            
             <p><table class="result">
                 <tr>
                     <thead><td colspan="2">
-                        Weekly Statistics
+                        Results
                     </td></thead>
                 </tr>
                 <tbody>
-                <tr>
-                    <td>
-                        Total:
-                    </td>
-                    <td>
-                        <span id="tFood"></span>
-                    </td>
-                </tr>
                 <tr>
                     <td>
                         Goal:
@@ -308,10 +291,26 @@
                 </tr>
                 <tr>
                     <td>
-                        Loot Needed:
+                        Missing:
                     </td>
                     <td>
-                        <span id="nFood"></span>
+                        <span id="mFood"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Hourly Production:
+                    </td>
+                    <td>
+                        <span id="hProd"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Time needed (dd:hh):
+                    </td>
+                    <td>
+                        <span id="pTime"></span>
                     </td>
                 </tr></tbody>
             </table></p>
@@ -356,11 +355,10 @@
 <!-- ---------------------------------------------------- -->
 <!-- SCRIPTS                                              -->
 <!-- ---------------------------------------------------- -->
-<!--Initiation-->
-<script src="js/initiation.js"></script>
+<script src="/js/init_timeCalc.js"></script>
 
 <!--Print Production to screen-->
-<script src="js/calculate.js"></script>
+<script src="/js/calculate.js"></script>
 
 <!--Facebook Like Button-->
 <div id="fb-root"></div>

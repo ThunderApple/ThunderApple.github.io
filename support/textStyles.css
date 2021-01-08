@@ -35,6 +35,12 @@ select {
 }
 button {
     font-family:Areal, sans-serif;
-    color:#00f900;
+    color: #00f900;
     background-color: #3f3f3f;
 }
+input[type=number]{
+    width: 7em;
+    background-color: #000000;
+    color: #00f900;
+    text-align: center;
+} 
