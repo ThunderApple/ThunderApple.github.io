@@ -17,6 +17,14 @@ h1, h4 {
     font-family:Arial, sans-serif;
     color:#00f900;
 }
+h1 {
+    display: inline;
+}
+h1.vigorTitle {
+    font-family:Arial, sans-serif;
+    color:#ee2805;
+    display: inline;
+}
 
 a:link {
     color:#a91701;
