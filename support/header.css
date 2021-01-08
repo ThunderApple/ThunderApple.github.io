@@ -1,0 +1,17 @@
+table.fpWrap {
+    position: relative;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+table.fpWrap td, table.fpWrap th {
+    text-align: center;
+}
+
+#vigorLogo {
+    transform: rotate(-20deg);
+    border: 0;
+}
+#vigorLogo:hover {
+    filter: invert(100%);
+}
