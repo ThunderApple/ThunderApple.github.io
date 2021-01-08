@@ -60,6 +60,8 @@ function calcTime() {
     var shouse = (document.getElementById("sh").value)/1; 
     var ohouse = (document.getElementById("oh").value)/1; 
 
+    gFood = (document.getElementById("gFood").value)/1
+
     iFood = (document.getElementById('iFood').value)/1;
 
 

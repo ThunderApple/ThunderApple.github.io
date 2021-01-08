@@ -15,10 +15,6 @@
 
 <body>
     <div id="wrapper">
-<!-- ---------------------------------------------------- -->
-<!--  MENU                                                -->
-<!-- ---------------------------------------------------- -->
-        
 
 <!-- ---------------------------------------------------- -->
 <!--  HEADER                                              -->
@@ -32,6 +28,15 @@
                         </td>
                         <td>
                             <div class="fpTitle"><h1>Time Calculator</h1></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <ul id="main_nav">
+                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="/calc/foodCalc.html">Food</a></li>
+                                <li><a href="/calc/timeCalc.html" class="active">Time</a></li>
+                            </ul>
                         </td>
                     </tr>
                     <tr>
@@ -266,8 +271,10 @@
     
                     <tr>
                         <td colspan="2">Food in inventory</td>
-                        <td> <input type="number" id="iFood" name="iFood" 
-                            value="0" maxlength="1" size="1"> </td> 
+                        <td> 
+                            <input type="number" id="iFood" name="iFood" 
+                            value="0"> 
+                        </td> 
                     </tr>
                 </tbody>
             </table></p>
@@ -286,7 +293,8 @@
                         Goal:
                     </td>
                     <td>
-                        <span id="gFood"></span>
+                        <input type="number" id="gFood" name="gFood" 
+                            value=10000>
                     </td>
                 </tr>
                 <tr>

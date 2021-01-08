@@ -39,8 +39,15 @@ button {
     background-color: #3f3f3f;
 }
 input[type=number]{
-    width: 7em;
-    background-color: #000000;
-    color: #00f900;
+    font-family:Georgia, serif;
+    font-size:14px;
+    font-style:normal;
+    font-weight:normal;
+
+    width: 5em;
+    background-color: #6e6e6e;
+    border-color: rgb(0, 0, 0);
+    color: #000000;
     text-align: center;
+    margin-right: 0.5em;
 } 
