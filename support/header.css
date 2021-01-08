@@ -32,7 +32,10 @@ table.fpWrap td, table.fpWrap th {
     -webkit-border-radius:7px; 
     border-radius:7px;
 } 
-#main_nav li a.active,
+#main_nav li a.active {
+    background-color: #a91701;
+}
 #main_nav li a:hover{  
+    filter: invert();
     background-color: #a91701;
 }
