@@ -7,8 +7,6 @@ var tFood = 0;
 var gFood = 10000;
 var nFood = gFood-tFood;
 
-var cYear = (new Date()).getFullYear();
-
 document.getElementById("copyYear").innerHTML = cYear;
 
 document.getElementById("hRt").innerHTML = hRat;

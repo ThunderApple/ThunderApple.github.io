@@ -1,0 +1,1 @@
+var cYear = (new Date()).getFullYear();

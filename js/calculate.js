@@ -88,3 +88,19 @@ function calcTime() {
         document.getElementById("pTime").innerHTML = pTime;
     }
 }
+
+
+function calcNOK() {
+    var ant = (document.getElementById('ant').value)/1;
+    var sDays = (document.getElementById('seasonTime').value)/1;
+
+    if (ant != 0) {
+        hNOK = ant / 24;
+        wNOK = ant * 7;
+        sNOK = ant * sDays;
+
+        document.getElementById("hNOK").innerHTML = hNOK.toFixed(2);
+        document.getElementById("wNOK").innerHTML = wNOK.toFixed(2);
+        document.getElementById("sNOK").innerHTML = sNOK.toFixed(2);   
+    }
+}
