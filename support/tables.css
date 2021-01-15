@@ -100,5 +100,6 @@ table.disclaimer .leftCol {
     text-align: right;
 }
 table.disclaimer .rightCol {
+    text-align: left;
     font-size: 12;
 }
