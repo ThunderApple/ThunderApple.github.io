@@ -51,7 +51,7 @@ table.result {
     margin-left: auto;
     margin-right: auto;
 }
-    table.result td, table.result th {
+table.result td, table.result th {
     border-width: 1px;
     border-color: #831100;
     border-style: solid;
@@ -79,10 +79,26 @@ table.gui, table.endTable {
 }
 #content {
     height: 100vh;
+    text-align: center;
 }
 #footer {
     bottom: 0;
     position: fixed;
     overflow: auto;
     width: 100%;
+}
+
+table.disclaimer {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+table.disclaimer td {
+    vertical-align: top;
+}
+table.disclaimer .leftCol {
+    text-align: right;
+}
+table.disclaimer .rightCol {
+    font-size: 12;
 }
