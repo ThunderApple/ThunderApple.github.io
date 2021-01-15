@@ -89,17 +89,22 @@ table.gui, table.endTable {
 }
 
 table.disclaimer {
-    width: 70%;
+    width: 28em;
     margin-left: auto;
     margin-right: auto;
+}
+table.disclaimer h5 {
+    display: inline;
 }
 table.disclaimer td {
     vertical-align: top;
 }
 table.disclaimer .leftCol {
     text-align: right;
+    vertical-align: top;
 }
 table.disclaimer .rightCol {
     text-align: left;
     font-size: 12;
+    vertical-align: top;
 }
