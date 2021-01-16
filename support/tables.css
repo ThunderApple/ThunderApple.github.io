@@ -110,11 +110,11 @@ table.disclaimer .rightCol {
 }
 
 table.fb-comments-background {
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: solid;
-    border-color: #831100;
-    background-color: #77bb41;
-    color: gold;
+    width: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-style: solid !important;
+    border-color: #831100 !important;
+    background-color: #77bb41 !important;
+    
 }
