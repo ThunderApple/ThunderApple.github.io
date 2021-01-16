@@ -108,3 +108,12 @@ table.disclaimer .rightCol {
     font-size: 12;
     vertical-align: top;
 }
+
+table.fb-comments-background {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: #831100;
+    background-color: #5b8f31;
+}
