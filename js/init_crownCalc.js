@@ -8,7 +8,7 @@ document.getElementById("hNOK").innerHTML = hNOK;
 document.getElementById("wNOK").innerHTML = wNOK;
 document.getElementById("sNOK").innerHTML = sNOK;
 
-var vNOK = 0;
+var vNOK = 8.56;
 document.getElementById("vNOK").innerHTML = vNOK;
 document.getElementById("vNOK").innerHTML = getNOKvalue();
 
