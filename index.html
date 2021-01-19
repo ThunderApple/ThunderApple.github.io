@@ -17,19 +17,40 @@
     <script>
     $(document).ready(function(){
         $('#content').load("/others/bulletin.html");
+        $("#homeNav").addClass("active");
     });
     $(document).ready(function(){
         $("#homeNav").click(function() {
             $('#content').load("/others/bulletin.html");
+
+            $("#homeNav").addClass("active");
+            $("#foodNav").removeClass("active");
+            $("#timeNav").removeClass("active");
+            $("#aboutNav").removeClass("active");
         });
         $("#foodNav").click(function() {
             $('#content').load("/calc/foodCalc.html");
+
+            $("#homeNav").removeClass("active");
+            $("#foodNav").addClass("active");
+            $("#timeNav").removeClass("active");
+            $("#aboutNav").removeClass("active");
         });
         $("#timeNav").click(function() {
             $('#content').load("/calc/timeCalc.html");
+
+            $("#homeNav").removeClass("active");
+            $("#foodNav").removeClass("active");
+            $("#timeNav").addClass("active");
+            $("#aboutNav").removeClass("active");
         });
         $("#aboutNav").click(function() {
             $('#content').load("/others/about.html");
+
+            $("#homeNav").removeClass("active");
+            $("#foodNav").removeClass("active");
+            $("#timeNav").removeClass("active");
+            $("#aboutNav").addClass("active");
         });
     });
     </script>
@@ -58,7 +79,7 @@
                     <tr>
                         <td colspan="2">
                             <ul id="main_nav">
-                                <li><a href="#" id="homeNav" class="active">Home</a></li>
+                                <li><a href="#" id="homeNav">Home</a></li>
                                 <li><a href="#" id="foodNav">Food</a></li>
                                 <li><a href="#" id="timeNav">Time</a></li>
                                 <!--<li><a href="/calc/CrownCalc.html">Crowns</a></li>-->
