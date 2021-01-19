@@ -1,194 +1,79 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>VigorGame Food Production Calculator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Vigor, VigorGame, food-production, ThunderApple">
-    <meta name="description" content="^Read title..">
-
-    <link rel="stylesheet" href="/support/header.css">
-    <link rel="stylesheet" href="/support/tables.css">
-    <link rel="stylesheet" href="/support/textStyles.css">
-
-    
-
-</head>
-
-<body>
-    <div id="wrapper">
-
-<!-- ---------------------------------------------------- -->
-<!--  HEADER                                              -->
-<!-- ---------------------------------------------------- -->
-        <div id="header">
-            <p>
-                <table class="fpWrap">
-                    <tr>
-                        <td valign="middle" align="center">
-                            <a href="https://vigorgame.com" target="_blank"><img id="vigorLogo" src="/media/vigor_logo.png" width="100" alt="VigorGame Logo" /></a>
-                        </td>
-                        <td>
-                            <div class="fpTitle"><h1>Crown Calculator</h1></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <ul id="main_nav">
-                                <li><a href="/index.html">Home</a></li>
-                                <li><a href="/calc/foodCalc.html">Food</a></li>
-                                <li><a href="/calc/timeCalc.html">Time</a></li>
-                                <li><a href="/calc/CrownCalc.html" class="active">Crowns</a></li>
-                                <li><a href="/others/disclaimer.html">About</a></li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <h4>How many 
-                                <p class="VALUTA" onmouseover="getNOKvalue()">
-                                    NOK
-                                    <span class="popuptext" id="myPopup">1 USD &asymp; 
-                                        <span id="vNOK"></span> 
-                                        NOK
-                                    </span>
-                                </p> 
-                                are you generating?
-                            </h4>
-                        </td>
-                    </tr>
-                    
-                    
-                </table>
-            </p>
-        </div>
-
-
 <!-- ---------------------------------------------------- -->
 <!--  CONTENT                                             -->
 <!-- ---------------------------------------------------- -->
-        <div id="content">
-            <table class="gui">
-                <thead>
-                    <tr>
-                        <th>Antenna LvL</th>
-                        <th>
-                            <select name="ant" id="ant">
-                            <option value=0>0</option>
-                            <option value=0>1</option>
-                            <option value=0>2</option>
-                            <option value=3.88>3</option>
-                            <option value=4.12>4</option>
-                            <option value=4.36>5</option>
-                            <option value=4.61>6</option>
-                            <option value=4.85>7</option>
-                            <option value=5.09>8</option>
-                            <option value=5.33>9</option>
-                            <option value=5.58>10</option>
-                            <option value=5.82>11</option>
-                            <option value=6.06>12</option>
-                            <option value=6.54>13</option>
-                            </select>
-                        </th> 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            Days untill<br>next season:
-                        </td>
-                        <td>
-                            <input type="number" name="seasonTime" id="seasonTime" value=0>
-                        </td>
-                    </tr>
-                </tbody>
-            </table></p>
-            
-            <button onclick="calcNOK()">Calculate<br>NOK</button>
-           
-            <p><table class="result">
-                <tr>
-                    <thead><td colspan="2">
-                        Crown Statistics
-                    </td></thead>
-                </tr>
-                <tbody>
-                <tr>
-                    <td>
-                        Hourly:
-                    </td>
-                    <td>
-                        <span id="hNOK"></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Weekly:
-                    </td>
-                    <td>
-                        <span id="wNOK"></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Untill next<br>season:
-                    </td>
-                    <td>
-                        <span id="sNOK"></span>
-                    </td>
-                </tr>
-            </tbody>
-            </table></p>
-        </div>
-
-
-<!-- ---------------------------------------------------- -->
-<!--  FOOTER                                              -->
-<!-- ---------------------------------------------------- -->
-        <div id="footer">
-            <p>If you like this page,<br>please support its author either by:</p>
-            <table class="endTable">
-                <tr>
-                    <td>
-                        <form action="https://www.paypal.com/donate" method="post" target="_top">
-                            <input type="hidden" name="hosted_button_id" value="8JWBRSWHA2QPY" />
-                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                            <img alt="" border="0" src="https://www.paypal.com/en_NO/i/scr/pixel.gif" width="1" height="1" />
-                        </form>
-                    </td>
-                    <td> <p>or</p> </td>
-                    <td>
-                        <div class="fb-like" data-href="https://thunderapple.github.io" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="false"></div>
-                    </td>
-                </tr>
-            </table>
-            <br>
-            and this page will be updated..
-            <br>
-            &copy; 2021 - <span id="copyYear"></span>; 
-            <a href="https://account.xbox.com/en-us/profile?gamertag=ThunderApple" target="_blank">ThunderApple@xbox</a>
-            <p></p>
-        </div>
-    </div>
-</body>
-
-
-
-
+<div id="content">
+    <table class="gui">
+        <thead>
+            <tr>
+                <th>Antenna LvL</th>
+                <th>
+                    <select name="ant" id="ant">
+                    <option value=0>0</option>
+                    <option value=0>1</option>
+                    <option value=0>2</option>
+                    <option value=3.88>3</option>
+                    <option value=4.12>4</option>
+                    <option value=4.36>5</option>
+                    <option value=4.61>6</option>
+                    <option value=4.85>7</option>
+                    <option value=5.09>8</option>
+                    <option value=5.33>9</option>
+                    <option value=5.58>10</option>
+                    <option value=5.82>11</option>
+                    <option value=6.06>12</option>
+                    <option value=6.54>13</option>
+                    </select>
+                </th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Days untill<br>next season:
+                </td>
+                <td>
+                    <input type="number" name="seasonTime" id="seasonTime" value=0>
+                </td>
+            </tr>
+        </tbody>
+    </table></p>
     
-
-<!-- ---------------------------------------------------- -->
-<!-- SCRIPTS                                              -->
-<!-- ---------------------------------------------------- -->
-<!--Initiation-->
-<script src="/js/global.js"></script>
-<script src="/js/init_crownCalc.js"></script>
-
-<!--Print Production to screen-->
-<script src="/js/calculate.js"></script>
-
-<!--Facebook Like Button-->
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="VoDuk0DZ">
-</script>
-
+    <button onclick="calcNOK()">Calculate<br>NOK</button>
+    
+    <p><table class="result">
+        <tr>
+            <thead><td colspan="2">
+                Crown Statistics
+            </td></thead>
+        </tr>
+        <tbody>
+        <tr>
+            <td>
+                Hourly:
+            </td>
+            <td>
+                <span id="hNOK"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Weekly:
+            </td>
+            <td>
+                <span id="wNOK"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Untill next<br>season:
+            </td>
+            <td>
+                <span id="sNOK"></span>
+            </td>
+        </tr>
+    </tbody>
+    </table></p>
+</div>
 </html>

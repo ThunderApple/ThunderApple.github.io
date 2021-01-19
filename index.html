@@ -13,6 +13,28 @@
     <!-- FACEBOOK MODERATION -->
     <meta property="fb:app_id" content="232772858376537" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('#content').load("/others/bulletin.html");
+    });
+    $(document).ready(function(){
+        $("#homeNav").click(function() {
+            $('#content').load("/others/bulletin.html");
+        });
+        $("#foodNav").click(function() {
+            $('#content').load("/calc/foodCalc.html");
+        });
+        $("#timeNav").click(function() {
+            $('#content').load("/calc/timeCalc.html");
+        });
+        $("#aboutNav").click(function() {
+            $('#content').load("/others/about.html");
+        });
+    });
+    </script>
+    
+
 </head>
 
 <body>
@@ -36,11 +58,11 @@
                     <tr>
                         <td colspan="2">
                             <ul id="main_nav">
-                                <li><a href="/index.html" class="active">Home</a></li>
-                                <li><a href="/calc/foodCalc.html">Food</a></li>
-                                <li><a href="/calc/timeCalc.html">Time</a></li>
+                                <li><a href="#" id="homeNav" class="active">Home</a></li>
+                                <li><a href="#" id="foodNav">Food</a></li>
+                                <li><a href="#" id="timeNav">Time</a></li>
                                 <!--<li><a href="/calc/CrownCalc.html">Crowns</a></li>-->
-                                <li><a href="/others/disclaimer.html">About</a></li>
+                                <li><a href="#" id="aboutNav">About</a></li>
                             </ul>
                         </td>
                     </tr>    
@@ -53,35 +75,7 @@
 <!--  CONTENT                                             -->
 <!-- ---------------------------------------------------- -->
         <div id="content">
-            
-            <p>
-                <br>
-                <h1>Visitor Bulletin</h3>
-                <br>Be sure to leave your awesome feedback below!
-            </p>
-            
-            <table class="fb-comments-background">
-                <tr>
-                    <td>
-                        <div class="fb-comments" 
-                        data-href="https://thunderapple.github.io" 
-                        data-width="40" 
-                        data-numposts="5" 
-                        data-colorscheme="dark"
-                        data-order-by="reverse_time"
-                        >
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <br>
-
-            <p>
-                <span class="fb-comments-count" 
-                data-href="https://thunderapple.github.io">
-                </span>
-                awesome comment(s).
-            </p> 
+           <!-- Content Will Load Here-->
         </div>
 
 
@@ -124,7 +118,12 @@
 <!-- SCRIPTS                                              -->
 <!-- ---------------------------------------------------- -->
 <!--Initiation-->
-<script src="js/global.js"></script>
+<script src="/js/global.js"></script>
+<script src="/js/contentLoad.js"></script>
+<script src="/js/calculate.js"></script>
+<script src="/js/init_crownCalc.js"></script>
+<script src="/js/init_foodCalc.js"></script>
+<script src="/js/init_timeCalc.js"></script>
 
 <!--Facebook Like Button-->
 <div id="fb-root"></div>
