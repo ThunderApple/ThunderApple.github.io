@@ -1,0 +1,4 @@
+#ignore following stuff
+
+*.DS_Store
+/ps_rss
