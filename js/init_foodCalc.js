@@ -7,8 +7,6 @@ var tFood = 0;
 var gFood = 10000;
 var nFood = gFood-tFood;
 
-document.getElementById("copyYear").innerHTML = cYear;
-
 document.getElementById("hRt").innerHTML = hRat;
 document.getElementById("hBp").innerHTML = hBox;
 

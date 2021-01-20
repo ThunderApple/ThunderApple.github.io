@@ -1,17 +1,45 @@
+// Production
+var rat1 = (document.getElementById("rt1").value)/1; 
+var rat2 = (document.getElementById("rt2").value)/1; 
+var rat3 = (document.getElementById("rt3").value)/1; 
+var rat4 = (document.getElementById("rt4").value)/1; 
+
+var box1 = (document.getElementById("bp1").value)/1; 
+var box2 = (document.getElementById("bp2").value)/1; 
+var box3 = (document.getElementById("bp3").value)/1; 
+var box4 = (document.getElementById("bp4").value)/1; 
+
+var shouse = (document.getElementById("sh").value)/1; 
+var ohouse = (document.getElementById("oh").value)/1; 
+
+// Time Calc
+var pDays = 0;
+var pHour = 0;
+
+var gFood = (document.getElementById("gFood").value)/1
+var iFood = (document.getElementById('iFood').value)/1;
+
+// Crown Calc
+var ant = (document.getElementById('ant').value)/1;
+var sDays = (document.getElementById('seasonTime').value)/1;
+
+//----------------------------------------------------------
+// FUNCTIONS
+//----------------------------------------------------------
 function calcFood() {
     // Table 1
-    var rat1 = (document.getElementById("rt1").value)/1; 
-    var rat2 = (document.getElementById("rt2").value)/1; 
-    var rat3 = (document.getElementById("rt3").value)/1; 
-    var rat4 = (document.getElementById("rt4").value)/1; 
+    rat1 = (document.getElementById("rt1").value)/1; 
+    rat2 = (document.getElementById("rt2").value)/1; 
+    rat3 = (document.getElementById("rt3").value)/1; 
+    rat4 = (document.getElementById("rt4").value)/1; 
 
-    var box1 = (document.getElementById("bp1").value)/1; 
-    var box2 = (document.getElementById("bp2").value)/1; 
-    var box3 = (document.getElementById("bp3").value)/1; 
-    var box4 = (document.getElementById("bp4").value)/1; 
+    box1 = (document.getElementById("bp1").value)/1; 
+    box2 = (document.getElementById("bp2").value)/1; 
+    box3 = (document.getElementById("bp3").value)/1; 
+    box4 = (document.getElementById("bp4").value)/1; 
 
-    var shouse = (document.getElementById("sh").value)/1; 
-    var ohouse = (document.getElementById("oh").value)/1; 
+    shouse = (document.getElementById("sh").value)/1; 
+    ohouse = (document.getElementById("oh").value)/1; 
 
     hRat = rat1 + rat2 + rat3 + rat4;
     hRat = hRat + ((hRat*shouse)/100);
@@ -44,24 +72,23 @@ function calcFood() {
 
 
 function calcTime() {
-    var pDays = 0;
-    var pHour = 0;
+    pDays = 0;
+    pHour = 0;
 
-    var rat1 = (document.getElementById("rt1").value)/1; 
-    var rat2 = (document.getElementById("rt2").value)/1; 
-    var rat3 = (document.getElementById("rt3").value)/1; 
-    var rat4 = (document.getElementById("rt4").value)/1; 
+    rat1 = (document.getElementById("rt1").value)/1; 
+    rat2 = (document.getElementById("rt2").value)/1; 
+    rat3 = (document.getElementById("rt3").value)/1; 
+    rat4 = (document.getElementById("rt4").value)/1; 
 
-    var box1 = (document.getElementById("bp1").value)/1; 
-    var box2 = (document.getElementById("bp2").value)/1; 
-    var box3 = (document.getElementById("bp3").value)/1; 
-    var box4 = (document.getElementById("bp4").value)/1; 
+    box1 = (document.getElementById("bp1").value)/1; 
+    box2 = (document.getElementById("bp2").value)/1; 
+    box3 = (document.getElementById("bp3").value)/1; 
+    box4 = (document.getElementById("bp4").value)/1; 
 
-    var shouse = (document.getElementById("sh").value)/1; 
-    var ohouse = (document.getElementById("oh").value)/1; 
+    shouse = (document.getElementById("sh").value)/1; 
+    ohouse = (document.getElementById("oh").value)/1; 
 
     gFood = (document.getElementById("gFood").value)/1
-
     iFood = (document.getElementById('iFood').value)/1;
 
 
@@ -91,8 +118,8 @@ function calcTime() {
 
 
 function calcNOK() {
-    var ant = (document.getElementById('ant').value)/1;
-    var sDays = (document.getElementById('seasonTime').value)/1;
+    ant = (document.getElementById('ant').value)/1;
+    sDays = (document.getElementById('seasonTime').value)/1;
 
     if (ant != 0) {
         hNOK = ant / 24;

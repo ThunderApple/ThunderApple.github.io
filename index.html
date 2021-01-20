@@ -22,6 +22,14 @@
         $("#headerText").text("Welcome Outlander")
     });
     $(document).ready(function(){
+        $("#headerLinkText").click(function() {
+            $('#content').load("/others/bulletin.html");
+            $("#headerText").text("Welcome Outlander");
+            $("#homeNav").addClass("active");
+            $("#foodNav").removeClass("active");
+            $("#timeNav").removeClass("active");
+            $("#aboutNav").removeClass("active");
+        });
         $("#homeNav").click(function() {
             $('#content').load("/others/bulletin.html");
             $("#headerText").text("Welcome Outlander");
@@ -56,8 +64,6 @@
         });
     });
     </script>
-    
-
 </head>
 
 <body>
@@ -75,7 +81,7 @@
                         </td>
                         <td>
                             <div class="fpTitle">
-                                <a href="./index.html" id="headerLinkText"><h1><span id="headerText"></span></h1></a>
+                                <a href="#" id="headerLinkText"><h1><span id="headerText"></span></h1></a>
                             </div>
                         </td>
                         </td>
