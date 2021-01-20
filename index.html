@@ -14,15 +14,17 @@
     <meta property="fb:app_id" content="232772858376537" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <script>
     $(document).ready(function(){
         $('#content').load("/others/bulletin.html");
         $("#homeNav").addClass("active");
+        $("#headerText").text("Welcome Outlander")
     });
     $(document).ready(function(){
         $("#homeNav").click(function() {
             $('#content').load("/others/bulletin.html");
-
+            $("#headerText").text("Welcome Outlander");
             $("#homeNav").addClass("active");
             $("#foodNav").removeClass("active");
             $("#timeNav").removeClass("active");
@@ -30,7 +32,7 @@
         });
         $("#foodNav").click(function() {
             $('#content').load("/calc/foodCalc.html");
-
+            $("#headerText").text("Food Calculator")
             $("#homeNav").removeClass("active");
             $("#foodNav").addClass("active");
             $("#timeNav").removeClass("active");
@@ -38,7 +40,7 @@
         });
         $("#timeNav").click(function() {
             $('#content').load("/calc/timeCalc.html");
-
+            $("#headerText").text("Time Calculator")
             $("#homeNav").removeClass("active");
             $("#foodNav").removeClass("active");
             $("#timeNav").addClass("active");
@@ -46,7 +48,7 @@
         });
         $("#aboutNav").click(function() {
             $('#content').load("/others/about.html");
-
+            $("#headerText").text("About This Site")
             $("#homeNav").removeClass("active");
             $("#foodNav").removeClass("active");
             $("#timeNav").removeClass("active");
@@ -72,7 +74,9 @@
                             <a href="https://vigorgame.com" target="_blank"><img id="vigorLogo" src="/media/vigor_logo.png" width="100" alt="VigorGame Logo" /></a>
                         </td>
                         <td>
-                            <div class="fpTitle"><h1>Fan Page</h1></div>
+                            <div class="fpTitle">
+                                <a href="./index.html" id="headerLinkText"><h1><span id="headerText"></span></h1></a>
+                            </div>
                         </td>
                         </td>
                     </tr>
@@ -140,19 +144,11 @@
 <!-- ---------------------------------------------------- -->
 <!--Initiation-->
 <script src="/js/global.js"></script>
-<script src="/js/contentLoad.js"></script>
 <script src="/js/calculate.js"></script>
-<script src="/js/init_crownCalc.js"></script>
-<script src="/js/init_foodCalc.js"></script>
-<script src="/js/init_timeCalc.js"></script>
 
 <!--Facebook Like Button-->
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="VoDuk0DZ">
-</script>
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="iWiEdhl3">
 </script>
 
 </html>

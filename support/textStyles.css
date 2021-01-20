@@ -1,3 +1,10 @@
+#headerLinkText:link,
+#headerLinkText:hover
+#headerLinkText:visited
+#headerLinkText:active  {
+    text-decoration: none;
+}
+
 body {
     background-color:#000000;
     background-repeat:no-repeat;
