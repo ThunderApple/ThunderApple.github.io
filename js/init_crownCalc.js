@@ -2,8 +2,6 @@ var hNOK = 0;
 var wNOK = 0;
 var sNOK = 0;
 
-
-
 document.getElementById("hNOK").innerHTML = hNOK;
 document.getElementById("wNOK").innerHTML = wNOK;
 document.getElementById("sNOK").innerHTML = sNOK;

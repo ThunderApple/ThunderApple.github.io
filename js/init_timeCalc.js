@@ -1,4 +1,6 @@
 var iFood = 0;
+var pDays = 0;
+var pHour = 0;
 
 var gFood = 10000;
 var mFood = gFood-iFood;
