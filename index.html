@@ -28,7 +28,9 @@
             $("#homeNav").addClass("active");
             $("#foodNav").removeClass("active");
             $("#timeNav").removeClass("active");
+            //$("#timeNav").removeClass("active");
             $("#aboutNav").removeClass("active");
+            //$("#promoNav").removeClass("active");
         });
         $("#homeNav").click(function() {
             $('#content').load("/others/bulletin.html");
@@ -36,7 +38,9 @@
             $("#homeNav").addClass("active");
             $("#foodNav").removeClass("active");
             $("#timeNav").removeClass("active");
+            //$("#timeNav").removeClass("active");
             $("#aboutNav").removeClass("active");
+            //$("#promoNav").removeClass("active");
         });
         $("#foodNav").click(function() {
             $('#content').load("/calc/foodCalc.html");
@@ -44,7 +48,9 @@
             $("#homeNav").removeClass("active");
             $("#foodNav").addClass("active");
             $("#timeNav").removeClass("active");
+            //$("#timeNav").removeClass("active");
             $("#aboutNav").removeClass("active");
+            //$("#promoNav").removeClass("active");
         });
         $("#timeNav").click(function() {
             $('#content').load("/calc/timeCalc.html");
@@ -52,16 +58,40 @@
             $("#homeNav").removeClass("active");
             $("#foodNav").removeClass("active");
             $("#timeNav").addClass("active");
+            //$("#timeNav").removeClass("active");
             $("#aboutNav").removeClass("active");
+            //$("#promoNav").removeClass("active");
         });
+        /*$("#crownNav").click(function() {
+            $('#content').load("/calc/crownCalc.html");
+            $("#headerText").text("Crown Calculator")
+            $("#homeNav").removeClass("active");
+            $("#foodNav").removeClass("active");
+            $("#timeNav").removeClass("active");
+            $("#timeNav").addClass("active");
+            $("#aboutNav").removeClass("active");
+            //$("#promoNav").removeClass("active");
+        });*/
         $("#aboutNav").click(function() {
             $('#content').load("/others/about.html");
             $("#headerText").text("About This Site")
             $("#homeNav").removeClass("active");
             $("#foodNav").removeClass("active");
             $("#timeNav").removeClass("active");
+            //$("#timeNav").removeClass("active");
             $("#aboutNav").addClass("active");
+            //$("#promoNav").removeClass("active");
         });
+        /*$("#promoNav").click(function() {
+            $('#content').load("/others/about.html");
+            $("#headerText").text("About This Site")
+            $("#homeNav").removeClass("active");
+            $("#foodNav").removeClass("active");
+            $("#timeNav").removeClass("active");
+            //$("#timeNav").removeClass("active");
+            $("#aboutNav").removeClass("active");
+            //$("#promoNav").addClass("active");
+        });*/
     });
     </script>
 </head>
@@ -92,8 +122,9 @@
                                 <li><a href="#" id="homeNav">Home</a></li>
                                 <li><a href="#" id="foodNav">Food</a></li>
                                 <li><a href="#" id="timeNav">Time</a></li>
-                                <!--<li><a href="/calc/CrownCalc.html">Crowns</a></li>-->
+                                <!--<li><a href="#" id="crownNav">Crowns</a></li>-->
                                 <li><a href="#" id="aboutNav">About</a></li>
+                                <!--<li><a href="#" id="promoNav">PROMO</a></li>-->
                             </ul>
                         </td>
                     </tr>    
@@ -155,6 +186,10 @@
 <!--Facebook Like Button-->
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="VoDuk0DZ">
+</script>
+
+<script>
+    FB.XFBML.parse(document.getElementById('fb-comments'));
 </script>
 
 </html>
