@@ -12,7 +12,7 @@ body {
     background-attachment:fixed;
     text-align: center;
     margin-bottom: 170px;
-
+    margin: 0 auto;
     font-family:Georgia, serif;
     font-size:14px;
     font-style:normal;
@@ -31,6 +31,16 @@ h1.vigorTitle {
     font-family:Arial, sans-serif;
     color:#ee2805;
     display: inline;
+}
+
+#helpTxt {
+    display: inline;
+}
+#helpLink {
+    color:gold;
+}
+#helpLink:hover {
+    color: red;
 }
 
 .VALUTA {

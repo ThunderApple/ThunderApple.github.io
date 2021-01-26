@@ -6,8 +6,7 @@ table.gui {
     border-color: #831100;
     border-style: solid;
     color: #77bb41;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 table.gui td, table.gui th {
     border-width: 1px;
@@ -90,8 +89,8 @@ table.gui, table.endTable {
 
 table.disclaimer {
     width: 28em;
-    margin-left: auto;
-    margin-right: auto;
+    
+    margin: 0 auto;
 }
 table.disclaimer h5 {
     display: inline;
