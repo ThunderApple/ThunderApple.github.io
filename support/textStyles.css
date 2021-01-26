@@ -125,8 +125,8 @@ input[type=number]{
 #newText.newPromo {
     font-size: 70%;
     position: fixed;
-    padding-left: 6.3em;
-    top: 7.8em;
+    padding-left: 5.2em;
+    top: 8.2em;
     color: red;
     font-weight: bolder;
     transform: rotate(20deg);

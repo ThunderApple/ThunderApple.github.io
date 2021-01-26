@@ -89,8 +89,8 @@ table.gui, table.endTable {
 
 table.disclaimer {
     width: 28em;
-    
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 table.disclaimer h5 {
     display: inline;
