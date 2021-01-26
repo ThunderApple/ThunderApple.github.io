@@ -107,3 +107,18 @@ input[type=number]{
     font-size: 70%;
     line-height: 100%;
 }
+
+#newText.oldPromo {
+    display: none;
+}
+
+#newText.newPromo {
+    font-size: 70%;
+    position: fixed;
+    padding-left: 6.3em;
+    top: 7.8em;
+    color: red;
+    font-weight: bolder;
+    transform: rotate(20deg);
+    text-shadow: -2px 2px black;
+}

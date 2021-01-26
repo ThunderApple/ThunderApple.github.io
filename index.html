@@ -30,7 +30,7 @@
             $("#timeNav").removeClass("active");
             //$("#timeNav").removeClass("active");
             $("#aboutNav").removeClass("active");
-            //$("#promoNav").removeClass("active");
+            $("#promoNav").removeClass("active");
         });
         $("#homeNav").click(function() {
             $('#content').load("/others/bulletin.html");
@@ -40,7 +40,7 @@
             $("#timeNav").removeClass("active");
             //$("#timeNav").removeClass("active");
             $("#aboutNav").removeClass("active");
-            //$("#promoNav").removeClass("active");
+            $("#promoNav").removeClass("active");
         });
         $("#foodNav").click(function() {
             $('#content').load("/calc/foodCalc.html");
@@ -50,7 +50,7 @@
             $("#timeNav").removeClass("active");
             //$("#timeNav").removeClass("active");
             $("#aboutNav").removeClass("active");
-            //$("#promoNav").removeClass("active");
+            $("#promoNav").removeClass("active");
         });
         $("#timeNav").click(function() {
             $('#content').load("/calc/timeCalc.html");
@@ -60,7 +60,7 @@
             $("#timeNav").addClass("active");
             //$("#timeNav").removeClass("active");
             $("#aboutNav").removeClass("active");
-            //$("#promoNav").removeClass("active");
+            $("#promoNav").removeClass("active");
         });
         /*$("#crownNav").click(function() {
             $('#content').load("/calc/crownCalc.html");
@@ -80,18 +80,18 @@
             $("#timeNav").removeClass("active");
             //$("#timeNav").removeClass("active");
             $("#aboutNav").addClass("active");
-            //$("#promoNav").removeClass("active");
+            $("#promoNav").removeClass("active");
         });
-        /*$("#promoNav").click(function() {
-            $('#content').load("/others/about.html");
-            $("#headerText").text("About This Site")
+        $("#promoNav").click(function() {
+            $('#content').load("/others/promo.html");
+            $("#headerText").text("Promotions!")
             $("#homeNav").removeClass("active");
             $("#foodNav").removeClass("active");
             $("#timeNav").removeClass("active");
             //$("#timeNav").removeClass("active");
             $("#aboutNav").removeClass("active");
-            //$("#promoNav").addClass("active");
-        });*/
+            $("#promoNav").addClass("active");
+        });
     });
     </script>
 </head>
@@ -124,7 +124,12 @@
                                 <li><a href="#" id="timeNav">Time</a></li>
                                 <!--<li><a href="#" id="crownNav">Crowns</a></li>-->
                                 <li><a href="#" id="aboutNav">About</a></li>
-                                <!--<li><a href="#" id="promoNav">PROMO</a></li>-->
+                                <li id="promoTxt">
+                                    <a href="#" id="promoNav">PROMO</a>
+                                    <div id="newText" class="newPromo">
+                                        NEW
+                                    </div>
+                                </li>
                             </ul>
                         </td>
                     </tr>    

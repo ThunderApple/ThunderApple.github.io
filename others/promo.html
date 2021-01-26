@@ -4,16 +4,114 @@
 <!--  CONTENT                                             -->
 <!-- ---------------------------------------------------- -->
 <div id="content">
-    <table class="promoTable">
-        <tr>
-            <td class="leftCol"><h5>Name:</h5></td>
-            <td class="rightCol">
-                Info...<br>
-                click to reveal code
-                <br><br> 
-            </td>
-        </tr>
+  <h2>Get Your Promo Stuff Here!</h2>  
+  <h3>Click on the code/link to copy:<br>hover for preview</h3>
+    <table class="disclaimer">
+      <tr>
+        <td class="leftCol" class="trollBag"><h5>Grab your Troll Bag here:</h5></td>
+        <td class="rightCol" class="trollBag">
+          <div class="popup" onmouseover="popIn('trollPopUp')" onmouseout="popOut('trollPopUp')" >
+            <span id="trollCode" class="promoLink" onclick="copyText(trollCode)"></span>
+            <span class="popuptext" id="trollPopUp">
+              <a href="/media/Canvas_Toll.jpg" target="_blank">
+                <img src="/media/Canvas_Toll.jpg" alt="Troll_Bag" style="width:200px;">
+              </a>
+            </span>
+          </div>
+        </td>
+      </tr>
     </table>
     
+    
+    <style>
+      .promoLink {
+        cursor: pointer;
+        color: gold;
+      }
+
+      /* Popup container */
+      .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      /* The actual popup (appears on top) */
+      .popup .popuptext {
+        visibility: hidden;
+        width: 210px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 0%;
+        margin-left: -80px;
+      }
+
+      /* Popup arrow */
+      .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+
+      /* Toggle this class when clicking on the popup container (hide and show the popup) */
+      .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s
+      }
+
+      /* Add animation (fade in the popup) */
+      @-webkit-keyframes fadeIn {
+        from {opacity: 0;} 
+        to {opacity: 1;}
+      }
+
+      @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:1 ;}
+      }
+    </style>
+    
+
+    <script>
+      var trollCode = "Awaiting Dev Approval..."
+      document.getElementById("trollCode").innerHTML = trollCode;
+
+      function copyText(txtVar) {
+        var dummy = document.createElement("textarea");
+
+        // to avoid breaking orgain page when copying more words
+        // cant copy when adding below this code
+        // dummy.style.display = 'none'
+        document.body.appendChild(dummy);
+
+        //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+        dummy.value = txtVar;
+        dummy.select();
+        dummy.setSelectionRange(0, 99999); /* For mobile devices */
+
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+      }
+      function popIn(id) {
+        var popup = document.getElementById(id);
+        popup.classList.toggle("show");
+      }
+      function popOut(id) {
+        var popup = document.getElementById(id);
+        popup.classList.toggle("show");
+      }
+    </script>
 </div>
 </html>
