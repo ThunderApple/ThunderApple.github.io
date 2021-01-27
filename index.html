@@ -28,7 +28,7 @@
             $("#homeNav").addClass("active");
             $("#foodNav").removeClass("active");
             $("#timeNav").removeClass("active");
-            //$("#timeNav").removeClass("active");
+            $("#crownNav").removeClass("active");
             $("#aboutNav").removeClass("active");
             $("#promoNav").removeClass("active");
         });
@@ -38,7 +38,7 @@
             $("#homeNav").addClass("active");
             $("#foodNav").removeClass("active");
             $("#timeNav").removeClass("active");
-            //$("#timeNav").removeClass("active");
+            $("#crownNav").removeClass("active");
             $("#aboutNav").removeClass("active");
             $("#promoNav").removeClass("active");
         });
@@ -48,7 +48,7 @@
             $("#homeNav").removeClass("active");
             $("#foodNav").addClass("active");
             $("#timeNav").removeClass("active");
-            //$("#timeNav").removeClass("active");
+            $("#crownNav").removeClass("active");
             $("#aboutNav").removeClass("active");
             $("#promoNav").removeClass("active");
         });
@@ -58,27 +58,27 @@
             $("#homeNav").removeClass("active");
             $("#foodNav").removeClass("active");
             $("#timeNav").addClass("active");
-            //$("#timeNav").removeClass("active");
+            $("#crownNav").removeClass("active");
             $("#aboutNav").removeClass("active");
             $("#promoNav").removeClass("active");
         });
-        /*$("#crownNav").click(function() {
+        $("#crownNav").click(function() {
             $('#content').load("/calc/crownCalc.html");
             $("#headerText").text("Crown Calculator")
             $("#homeNav").removeClass("active");
             $("#foodNav").removeClass("active");
             $("#timeNav").removeClass("active");
-            $("#timeNav").addClass("active");
+            $("#crownNav").addClass("active");
             $("#aboutNav").removeClass("active");
-            //$("#promoNav").removeClass("active");
-        });*/
+            $("#promoNav").removeClass("active");
+        });
         $("#aboutNav").click(function() {
             $('#content').load("/others/about.html");
             $("#headerText").text("About This Site")
             $("#homeNav").removeClass("active");
             $("#foodNav").removeClass("active");
             $("#timeNav").removeClass("active");
-            //$("#timeNav").removeClass("active");
+            $("#crownNav").removeClass("active");
             $("#aboutNav").addClass("active");
             $("#promoNav").removeClass("active");
         });
@@ -88,7 +88,7 @@
             $("#homeNav").removeClass("active");
             $("#foodNav").removeClass("active");
             $("#timeNav").removeClass("active");
-            //$("#timeNav").removeClass("active");
+            $("#crownNav").removeClass("active");
             $("#aboutNav").removeClass("active");
             $("#promoNav").addClass("active");
         });
@@ -114,15 +114,14 @@
                                 <a href="#" id="headerLinkText"><h1><span id="headerText"></span></h1></a>
                             </div>
                         </td>
-                        </td>
                     </tr>
                     <tr>
-                        <td colspan="2">
+                        <td colspan="2" style="text-align: center;">
                             <ul id="main_nav">
                                 <li><a href="#" id="homeNav">Home</a></li>
                                 <li><a href="#" id="foodNav">Food</a></li>
                                 <li><a href="#" id="timeNav">Time</a></li>
-                                <!--<li><a href="#" id="crownNav">Crowns</a></li>-->
+                                <li><a href="#" id="crownNav">Crowns</a></li>
                                 <li><a href="#" id="aboutNav">About</a></li>
                                 <li id="promoTxt">
                                     <a href="#" id="promoNav">Promo</a>

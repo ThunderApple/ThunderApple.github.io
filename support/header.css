@@ -1,5 +1,5 @@
 table.fpWrap {
-    position: relative;
+    position: static;
     width: auto;
     margin-left: auto;
     margin-right: auto;
@@ -19,6 +19,8 @@ table.fpWrap td, table.fpWrap th {
 
 #main_nav { 
     list-style-type: none;
+    text-align: center;
+    margin: 0 auto;
 }
 #main_nav li { 
     float: left;

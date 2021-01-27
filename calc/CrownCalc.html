@@ -4,6 +4,24 @@
 <!--  CONTENT                                             -->
 <!-- ---------------------------------------------------- -->
 <div id="content">
+    
+    <h5 id="helpTxt">
+        Some Data Still Missing... Please Help By Adding Your Data Here:<br>
+    </h5>
+    <a id="helpLink" href="https://docs.google.com/spreadsheets/d/1pN6VmfSAEeAPVDKScC9dmQ1J_XbL4QMUA95hnjcj8LA/edit#gid=0">ShelterLootContainer_spreadsheet</a>
+
+    <h4>How many 
+        <p class="VALUTA" onmouseover="getNOKvalue()">
+            NOK
+            <span class="popuptext" id="myPopup">1 USD  
+                <span id="vNOK"></span> 
+                NOK
+            </span>
+        </p> 
+        are you generating?
+    </h4>
+
+    <p></p>
     <table class="gui">
         <thead>
             <tr>
@@ -34,7 +52,7 @@
                     Days untill<br>next season:
                 </td>
                 <td>
-                    <input type="number" name="seasonTime" id="seasonTime" value=0>
+                    <input type="number" name="seasonTime" id="seasonTime" value=30>
                 </td>
             </tr>
         </tbody>
@@ -75,6 +93,15 @@
         </tr>
     </tbody>
     </table></p>
+
+    <div id="valutaDisclaimer">
+        Valuta exchange rates between<br>USD and Crowns are given by:<br>
+        <a class="valutaLink" href="https://exchangeratesapi.io">Foreign exchange rates API</a>
+        <br>Which is a subject of:<br>
+        <a class="valutaLink" href="https://www.ecb.europa.eu">
+        The European Central Bank</a>
+    </div>
+
 </div>
 <script src="/js/init_crownCalc.js"></script>
 </html>
