@@ -33,3 +33,11 @@ if (shouse != 0) {
 if (ohouse != 0) {
     document.getElementById("oh").selectedIndex = boostReverseLookup[ohouse];
 }
+
+// Crowns
+if (ant != 0) {
+    document.getElementById("ant").selectedIndex = crownReverseLookup[ant];
+}
+if (sDays != 30) {
+    document.getElementById("seasonTime").value = sDays;
+}

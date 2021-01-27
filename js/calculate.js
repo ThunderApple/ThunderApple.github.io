@@ -94,8 +94,8 @@ function calcTime() {
 
 
 function calcNOK() {
-    var ant = (document.getElementById('ant').value)/1;
-    var sDays = (document.getElementById('seasonTime').value)/1;
+    ant = (document.getElementById('ant').value)/1;
+    sDays = (document.getElementById('seasonTime').value)/1;
 
     if (ant != 0) {
         hNOK = ant / 24;

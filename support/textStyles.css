@@ -51,7 +51,7 @@ h1.vigorTitle {
 }
 .VALUTA .popuptext {
     visibility: hidden;
-    width: 160px;
+    width: 180px;
     background-color: #555;
     color: gold;
     text-align: center;
@@ -67,7 +67,7 @@ h1.vigorTitle {
     visibility: visible;
     display: block; 
     position: absolute; 
-    width: 10em; 
+    width: 11em; 
     background: rgb(0, 0, 0); 
     border-style: solid;
     border-width: 1px;
