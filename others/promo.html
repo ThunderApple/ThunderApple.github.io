@@ -7,19 +7,57 @@
   <h2>Get Your Promo Stuff Here!</h2>  
   <h3>Click on the code to copy:<br>hover for preview</h3>
     <table class="disclaimer">
-      <tr>
-        <td class="leftCol" class="trollBag"><h5>&#60;Insert Promo Content Name&#62;:</h5></td>
+      
+      <!--<tr>
+          <td colspan="2">
+            <h4 style="color: red; display: inline;">INGAME GIFTS</h4>
+          </td>
+        </tr>
+        <tr>
+        <td class="leftCol" class="trollBag"><h5>Troll Bag:</h5></td>
         <td class="rightCol" class="trollBag">
           <div class="popup" onmouseover="popIn('trollPopUp')" onmouseout="popOut('trollPopUp')" >
             <span id="trollCode" class="promoLink" onclick="copyText(trollCode)"></span>
+
             <span class="popuptext" id="trollPopUp">
               <a href="/media/Canvas_Toll.jpg" target="_blank">
                 <img src="/media/Canvas_Toll.jpg" alt="Troll_Bag" style="width:200px;">
               </a>
             </span>
+
           </div>
         </td>
       </tr>
+
+      <tr>
+        <td><br></td>
+      </tr>-->
+
+      <tr>
+        <td colspan="2">
+          <h4 style="color: purple; display: inline;">TWITCH LINKS</h4>
+        </td>
+      </tr>
+      <tr>
+        <td class="leftCol" class="trollBag"><h5>ThunderApple @ Twitch:</h5></td>
+        <td class="rightCol" class="trollBag">
+          <div class="popup" onmouseover="popIn('thTwitchPopUp')" onmouseout="popOut('thTwitchPopUp')" >
+            <a href="https://www.twitch.tv/thunderapple" target="_blank" style="text-decoration: none;">
+            <span id="thTwitch" class="promoLink" onclick="copyText(thTwitch)"></span>
+            </a>
+
+            <span class="popuptext" id="thTwitchPopUp">
+              <a href="https://www.twitch.tv/thunderapple" target="_blank">
+                <img src="/media/ThunderApple.png" style="width:200px;">
+              </a>
+            </span>
+
+          </div>
+        </td>
+      </tr>
+      
+
+      
     </table>
     
     
@@ -83,10 +121,17 @@
       }
     </style>
     
-
+    <!-- SCRIPTS -->
     <script>
-      var trollCode = "&#60;Insert Promo Code&#62;"
-      document.getElementById("trollCode").innerHTML = trollCode;
+      $("#thTwitchSite")
+        .show()
+        .html('<object data="https://www.twitch.tv/thunderapple"/>');
+
+      var trollCode = "&#60;Insert Promo Code&#62";
+      var thTwitch = "twitch.com/thunderapple";
+      //document.getElementById("trollCode").innerHTML = trollCode;
+      document.getElementById("thTwitch").innerHTML = thTwitch;
+      
 
       function copyText(txtVar) {
         var dummy = document.createElement("textarea");
