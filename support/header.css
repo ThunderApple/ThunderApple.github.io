@@ -27,6 +27,7 @@ table.fpWrap td, table.fpWrap th {
     margin-right: auto;
 }
 #main_nav li { 
+    line-height: 0.5em;
     display: inline;
 }
 #main_nav li a { 
