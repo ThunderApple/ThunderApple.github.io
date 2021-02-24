@@ -222,20 +222,41 @@
             </tr>
 
             <tr>
-            <td>Production (h)</td>
-            <td> <span id="hRt"></span> </td> 
-            <td> <span id="hBp"></span> </td>
+                <td colspan="2">Food in inventory:</td>
+                <td> 
+                    <input type="number" id="iFood" name="iFood" 
+                    value="0"> 
+                </td> 
             </tr>
             <tr>
-            <td>Production (week)</td>
-            <td> <span id="wRt"></span> </td> 
-            <td> <span id="wBp"></span> </td>
+                <td colspan="2">
+                    Goal:
+                </td>
+                <td>
+                    <input type="number" id="gFood" name="gFood" 
+                        value=10000>
+                </td>
             </tr>
+
+            <tr>
+                <td>Production (h)</td>
+                <td> <span id="hRt"></span> </td> 
+                <td> <span id="hBp"></span> </td>
+                </tr>
+                <tr>
+                <td>Production (week)</td>
+                <td> <span id="wRt"></span> </td> 
+                <td> <span id="wBp"></span> </td>
+            </tr>
+
         </tbody>
     </table></p>
     
+
+
     <button onclick="calcFood()">Calculate<br>Food</button>
     
+
     <p><table class="result">
         <tr>
             <thead><td colspan="2">
@@ -253,24 +274,27 @@
         </tr>
         <tr>
             <td>
-                Goal:
-            </td>
-            <td>
-                <span id="gFood"></span>
-            </td>
-        </tr>
-        <tr>
-            <td>
                 Loot Needed:
             </td>
             <td>
                 <span id="nFood"></span>
             </td>
-        </tr></tbody>
+        </tr>
+        <tr>
+            <td>
+                Time needed (dd:hh):
+            </td>
+            <td>
+                <span id="pTime"></span>
+            </td>
+        </tr>
+    </tbody>
     </table></p>
+
     <!-- SCRIPTS -->
     <script src="/js/global.js"></script>
     <script src="/js/init_foodCalc.js"></script>
     <script src="/js/keepValues.js"></script>
+
 </div>
 </html>
