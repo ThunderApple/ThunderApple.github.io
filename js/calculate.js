@@ -37,24 +37,13 @@ function calcFood() {
     document.getElementById("wBp").innerHTML = wBox.toFixed(2);
 
     hProduction = hRat + hBox;
-    document.getElementById("hProd").innerHTML = hProduction.toFixed(2);
     mFood = gFood - iFood;
-    document.getElementById("mFood").innerHTML = mFood.toFixed(2);
-
     
-    if (hProduction>0) {
-        pHour = mFood/hProduction;
-        pDays = parseInt(pHour / 24);
-
-        pHour = (pHour - (pDays*24)).toFixed(0);
-
-        pTime = pDays.toString() + ":" + pHour.toString();
-        document.getElementById("pTime").innerHTML = pTime;
-    }
+    
 
     // Table 2 - CALC
     tFood = wRat+wBox;
-    nFood = gFood-tFood;
+    nFood = gFood - tFood - iFood;
 
     document.getElementById("tFood").innerHTML = tFood.toFixed(2);
     if (nFood<=0) {
@@ -63,6 +52,16 @@ function calcFood() {
     }
     else {
         document.getElementById("nFood").innerHTML = nFood.toFixed(2);
+    }
+
+    if (hProduction>0) {
+        pHour = mFood/hProduction;
+        pDays = parseInt(pHour / 24);
+
+        pHour = (pHour - (pDays*24)).toFixed(0);
+
+        pTime = pDays.toString() + ":" + pHour.toString();
+        document.getElementById("pTime").innerHTML = pTime;
     }
 }
 

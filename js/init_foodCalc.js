@@ -27,4 +27,3 @@ document.getElementById("nFood").innerHTML = nFood.toFixed(2);
 document.getElementById("mFood").innerHTML = mFood.toFixed(2);
 
 document.getElementById("pTime").innerHTML = pTime;
-document.getElementById("hProd").innerHTML = hProduction.toFixed(2);
